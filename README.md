@@ -4,3 +4,8 @@
 
 
 [Tableau Trello](https://trello.com/invite/b/66c76794be10e4bfff394bf5/ATTIb54f4441fb3816a7905c1df4e503687a79C02FB5/my-trello-board)
+
+
+Navigation: Fenêtre modale
+
+Composant Vue.js: Dark mode / Light mode toggle
