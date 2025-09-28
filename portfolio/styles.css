@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+  html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #ffff;
+}
+
+/* Navbar */
+.nav-list {
+    background-color: #ffff;
+    box-shadow: 0px 0px 10px color(srgb rgb(23, 10, 10) green blue);
+    margin: 0;
+    padding: 1rem 0;
+    /* Alignement au centre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* Espacement et style des liens de navbar */
+.nav-item {
+    list-style: none;
+    margin-right: 7.5rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    font-family: "Alegreya";
+    font-size: 20px;
+}
+
+.link-logo {
+    font-style: italic;
+   
+}
