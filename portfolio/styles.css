@@ -57,3 +57,27 @@ h1 {
     justify-content: center;
     margin-top: 15rem;
 }
+
+/* Espacement de la section À propos */
+
+.Description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 30rem;
+    margin-top: 15rem;
+}
+
+h2 {
+   margin-right: 19rem;
+   font-size: 3rem;
+}
+
+/* Boîte qui sera remplacée par ma photo */
+
+.image {
+    width: 150px;
+    height: 150px;
+    border: black;
+}
