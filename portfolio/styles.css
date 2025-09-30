@@ -200,23 +200,23 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    margin-top: 10rem;
+    flex-direction: column;
+    margin-top: 4rem;
 }
 
 .photo_profil {
-    width: 30rem;
-    height: 30rem;
+    width: 25rem;
+    height: 25rem;
     border-radius: 20px;
-    margin-left: 45rem;
+    margin-left: 1.8rem;
 }
 
 h2 {
     display: flex;
     justify-content: center;
     font-size: 3.5rem;
-    margin-top: 15rem;
-    margin-right: 50rem;
+    margin-top: 7rem;
+    margin-right: 1rem;
     color: rgb(110, 110, 110);
 
 }
@@ -230,14 +230,14 @@ h2:hover {
 
 /* Position du texte */
 .Description {
-    margin-right: 45rem;
+    margin-left: 46rem;
 }
 
 
 /* Style unique de position pour ce titre */
 .Description h2 {
-   margin-top: 0;
-   margin-right: 15rem;
+   margin-top: 6rem;
+   margin-right: 1rem;
    font-size: 3.5rem;
 }
 
@@ -251,13 +251,13 @@ p {
 .wrapper {
     display: grid;
     justify-content: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto ;
     column-gap: 4em;
     row-gap: 4em;
 }
 
 .image {
-    width: 450px;
+    width: 400px;
     position: relative;
     
 }
