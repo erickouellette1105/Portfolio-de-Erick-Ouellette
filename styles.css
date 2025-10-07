@@ -24,7 +24,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -81,7 +81,7 @@ h1 {
 }
 
 .photo_profil {
-    width: 25vw;
+    width: 15vw;
     height: auto;
     border-radius: 20px;
     
@@ -133,7 +133,7 @@ p {
     
 }
 
-img {
+.wrapper_img {
     width: 100%;
     display: block;
     margin: auto;
@@ -179,6 +179,18 @@ img {
 
 .content:hover > *{
     transform: translateY(0px);
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.apps {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 10vw;
 }
 
 
@@ -240,10 +252,7 @@ h2:hover {
     text-underline-offset: 15px;
 }
 
-/* Position du texte */
-.Description {
-    margin-left: 46rem;
-}
+
 
 
 /* Style unique de position pour ce titre */
@@ -274,7 +283,7 @@ p {
     
 }
 
-img {
+.wrapper_img {
     width: 100%;
     display: block;
     margin: auto;
@@ -321,6 +330,10 @@ img {
     transform: translateY(0px);
 }
 
-
+footer {
+    display: flex;
+    justify-content: center;
+    margin-left: 10rem;
+}
 
 }
