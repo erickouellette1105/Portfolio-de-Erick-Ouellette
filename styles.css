@@ -1,13 +1,13 @@
 * {
     box-sizing: border-box;
-  }
+}
 
 
-  html,
+html,
 body {
-  height: 100%;
-  margin: 0;
-  background-color: #ffff;
+    height: 100%;
+    margin: 0;
+    background-color: #ffff;
 }
 
 main {
@@ -17,7 +17,7 @@ main {
 /* Navbar */
 .nav-list {
     background-color: #ffff;
-    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 1rem 0;
     /* Alignement au centre */
@@ -28,7 +28,17 @@ main {
     top: 0;
     width: 100%;
     z-index: 1;
-    
+
+}
+
+/* Menu hamburger caché */
+
+.Mobilenav {
+    display: none;
+}
+
+.menu {
+    display: none;
 }
 
 
@@ -44,6 +54,7 @@ main {
     font-family: "Alegreya";
     font-size: 20px;
 }
+
 /* Effet survol */
 .nav-item a:hover {
     color: black;
@@ -54,7 +65,7 @@ main {
 /* Style Italique sur le logo */
 .link-logo {
     font-style: italic;
-   
+
 }
 
 /* Titre Portfolio */
@@ -84,8 +95,10 @@ h1 {
     width: 15vw;
     height: auto;
     border-radius: 20px;
-    
+
 }
+
+/* Style des titres */
 
 h2 {
     display: flex;
@@ -107,9 +120,9 @@ h2:hover {
 
 /* Style unique de position pour ce titre */
 .Description h2 {
-   margin-top: 0;
-   margin-right: 15rem;
-   font-size: 3.5rem;
+    margin-top: 0;
+    margin-right: 15rem;
+    font-size: 3.5rem;
 }
 
 
@@ -130,7 +143,7 @@ p {
 .image {
     width: 100%;
     position: relative;
-    
+
 }
 
 .wrapper_img {
@@ -172,12 +185,12 @@ p {
 }
 
 /* Mouvement du titre au survol */
-.content > *{
+.content>* {
     transform: translateY(25px);
     transition: transform 0.6s;
 }
 
-.content:hover > *{
+.content:hover>* {
     transform: translateY(0px);
 }
 
@@ -189,8 +202,13 @@ h3 {
 
 .apps {
     display: grid;
-    grid-template-columns: auto auto;
-    width: 10vw;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    column-gap: 5em;
+}
+
+.apps img {
+    width: 4rem;
 }
 
 
@@ -203,137 +221,208 @@ footer {
 /* Section Mobile */
 
 @media (max-width: 480px) {
-.nav-list {
-    display: none;
-}
+
+    /* Navbar */
+    .nav-list {
+        display: none;
+    }
+
+    .Mobilenav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: #f8f8f8;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        
+    }
+
+    .logo {
+        font-size: 2rem;
+        text-decoration: none;
+        color: inherit;
+    }
 
 
-/* Titre Portfolio */
-h1 {
-    font-size: 3rem;
-    font-style: italic;
-    font-family: "Alegreya";
-    display: flex;
-    justify-content: center;
-    margin-top: 12.5rem;
-}
-
-/* Espacement de la section À propos */
-
-.About {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 4rem;
-}
-
-.photo_profil {
-    width: 25rem;
-    height: 25rem;
-    border-radius: 20px;
-    margin-left: 1.8rem;
-}
-
-h2 {
-    display: flex;
-    justify-content: center;
-    font-size: 3.5rem;
-    margin-top: 7rem;
-    margin-right: 1rem;
-    color: rgb(110, 110, 110);
-
-}
-
-/* Effet survol sur les titres */
-h2:hover {
-    color: black;
-    text-decoration: underline;
-    text-underline-offset: 15px;
-}
+    /* Menu hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 20px;
+    }
 
 
+    .hamburger span {
+        display: block;
+        height: 4px;
+        background: #333;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    .menu {
+        display: none;
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        box-shadow: 0 0 20px black;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        
+    }
+
+    .menu li {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Toggle class */
+    .menu.active {
+        display: block;
+    }
+
+    /* Titre Portfolio */
+    h1 {
+        font-size: 3rem;
+        font-style: italic;
+        font-family: "Alegreya";
+        display: flex;
+        justify-content: center;
+        margin-top: 12.5rem;
+    }
+
+    /* Espacement de la section À propos */
+
+    .About {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+
+    .photo_profil {
+        width: 20rem;
+
+        border-radius: 20px;
+
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 3.5rem;
+        margin-top: 7rem;
+        margin-right: 1rem;
+        color: rgb(110, 110, 110);
+
+    }
+
+    /* Effet survol sur les titres */
+    h2:hover {
+        color: black;
+        text-decoration: underline;
+        text-underline-offset: 15px;
+    }
 
 
-/* Style unique de position pour ce titre */
-.Description h2 {
-   margin-top: 6rem;
-   margin-right: 1rem;
-   font-size: 3.5rem;
-}
 
 
-/* Taille du texte de description */
-p {
-    width: 25rem;
-}
+    /* Style unique de position pour ce titre */
+    .Description h2 {
+        display: flex;
+        justify-content: center;
+        margin-right: 1rem;
+        margin-top: 6rem;
+        font-size: 3.5rem;
+    }
 
-/* Conteneur des cartes "Parent" */
-.wrapper {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto ;
-    column-gap: 4em;
-    row-gap: 4em;
-}
 
-.image {
-    width: 400px;
-    position: relative;
-    
-}
+    /* Taille du texte de description */
+    p {
+        width: 20rem;
+    }
 
-.wrapper_img {
-    width: 100%;
-    display: block;
-    margin: auto;
-    border: 1px solid black;
-    border-radius: 5px;
-}
+    /* Conteneur des cartes "Parent" */
+    .wrapper {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: auto;
+        column-gap: 4em;
+        row-gap: 4em;
+    }
 
-/* Contenu de la carte */
-.content {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
-    transition: 0.6s;
-    border-radius: 5px;
-}
+    .image {
+        width: 400px;
+        position: relative;
 
-/* Effet survol qui dévoile le titre */
-.content:hover {
-    opacity: 1;
-}
+    }
 
-/* Titre de la carte */
-.content h3 {
-    font-size: 1.5rem;
-    color: white;
-    margin-top: 1rem;
-}
+    .wrapper_img {
+        width: 100%;
+        display: block;
+        margin: auto;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
 
-/* Mouvement du titre au survol */
-.content > *{
-    transform: translateY(25px);
-    transition: transform 0.6s;
-}
+    /* Contenu de la carte */
+    .content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        transition: 0.6s;
+        border-radius: 5px;
+    }
 
-.content:hover > *{
-    transform: translateY(0px);
-}
+    /* Effet survol qui dévoile le titre */
+    .content:hover {
+        opacity: 1;
+    }
 
-footer {
-    display: flex;
-    justify-content: center;
-    margin-left: 10rem;
-}
+    /* Titre de la carte */
+    .content h3 {
+        font-size: 1.5rem;
+        color: white;
+        margin-top: 1rem;
+    }
+
+    /* Mouvement du titre au survol */
+    .content>* {
+        transform: translateY(25px);
+        transition: transform 0.6s;
+    }
+
+    .content:hover>* {
+        transform: translateY(0px);
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        margin-left: 10rem;
+    }
 
 }
