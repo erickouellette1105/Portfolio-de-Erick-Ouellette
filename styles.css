@@ -170,7 +170,7 @@ p {
     opacity: 0;
     transition: 0.2s;
     border-radius: 5px;
-    pointer-events: none;
+    pointer-events: none; /* Ceci prévient l'interruption de l'effet hover que le Onclick causait */
 }
 
 /* Effet survol qui dévoile le titre */
@@ -196,6 +196,7 @@ p {
     transform: translateY(0px);
 }
 
+/* Pop-up des cartes */
 .modal {
     display: none;
     position: fixed;
@@ -261,7 +262,7 @@ h3 {
 .apps img:hover {
     transform: translateY(-10px) scale(1.2);
     transition: transform 0.2s;
-    
+
 }
 
 /* Logo Linkedin */
