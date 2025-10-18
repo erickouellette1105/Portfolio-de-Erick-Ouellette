@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Abri de survie",
+    "category": "3d",
+    "images": ["./img/abri_survie.png"]
+    
+  },
+  {
+    "id": 2,
+    "title": "Kigo",
+    "category": "3d",
+    "images": ["./img/Kigo.png"]
+    
+  },
+  {
+    "id": 3,
+    "title": "Étang de carpes",
+    "category": "3d",
+    "images": ["./img/koi_pond.png"]
+    
+  },
+  {
+    "id": 4,
+    "title": "Ville sombre",
+    "category": "3d",
+    "images": ["./img/projet4_placeholder.png"]
+    
+  }
+]

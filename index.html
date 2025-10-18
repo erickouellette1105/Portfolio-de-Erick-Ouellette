@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    
     <!-- Navbar du portfolio -->
     <navbar>
         <ul class="nav-list">
@@ -36,6 +37,7 @@
 
         
     </navbar>
+    <div class="vue">
 
     <!-- Nav mobile -->
          <div class="Mobilenav">
@@ -86,27 +88,33 @@
             <!-- Cartes -->
             <div class="wrapper">
                 <div class="image">
-                    <img src="img/abri_survie.png" class="wrapper_img">
+                    <img src="img/abri_survie.png" class="wrapper_img" onclick="openModal('modal1')">
                     <div class="content">
                         <h3>Abri de survie</h3>
                     </div>
                 </div>
 
+                <div id="modal1" class="modal">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <img class="modal-content" src="img/abri_survie.png">
+                    <div class="modal-titre">Abrie de survie</div>
+                </div>
+
                 <div class="image">
-                    <img src="img/Kigo.png" class="wrapper_img">
+                    <img src="img/Kigo.png" class="wrapper_img" onclick="openModal('modal2')">
                     <div class="content">
                         <h3>Kigo</h3>
                     </div>
                 </div>
                 <div class="image">
-                    <img src="img/koi_pond.png" class="wrapper_img">
+                    <img src="img/koi_pond.png" class="wrapper_img" onclick="openModal('modal3')">
                     <div class="content">
                         <h3>Étang de carpes</h3>
                     </div>
                 </div>
                 <div class="image">
                     <!-- Image temporaire-->
-                    <img src="img/projet4_placeholder.png" class="wrapper_img">
+                    <img src="img/projet4_placeholder.png" class="wrapper_img" onclick="openModal('modal4')">
                     <div class="content">
                         <h3>Ville sombre</h3>
                     </div>
@@ -144,7 +152,10 @@
 
         </footer>
     </main>
+</div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>
+    
 </body>
 
 </html>
