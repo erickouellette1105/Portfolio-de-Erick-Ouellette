@@ -6,7 +6,20 @@ hamburger.addEventListener('click', () => {
 });
 
 
-function show() {
-  const show = document.getElementById("hidden");
-  show.style.display = "block"
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
 }
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Fermer la modale si on clique en dehors du contenu
+window.onclick = function (event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(function (modal) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+};

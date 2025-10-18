@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    
+
     <!-- Navbar du portfolio -->
     <navbar>
         <ul class="nav-list">
@@ -35,22 +35,22 @@
             </li>
         </ul>
 
-        
+
     </navbar>
     <div class="vue">
 
-    <!-- Nav mobile -->
-         <div class="Mobilenav">
+        <!-- Nav mobile -->
+        <div class="Mobilenav">
             <a href="index.html" class="logo">ÉO</a>
-          <button class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            </div>
-        
+        </div>
+
         <nav class="menu" id="menu">
-            
+
             <ul>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projets">Projets</a></li>
@@ -58,104 +58,112 @@
                 <li><a href="#contact">Me contacter</a></li>
             </ul>
         </nav>
-    
-           
-    <main>
-        <!-- Titre du portfolio -->
-        <section class="Titre">
-            <h1>Portfolio</h1>
-        </section>
 
-        <!-- Section À propos -->
-        <section id="about" class="About">
-            <!-- Image temporaire -->
-            <img src="img/placeholder_photo.png" alt="" class="photo_profil">
-            <div class="Description">
-                <h2>À propos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet dapibus eros sit amet
-                    dapibus. Curabitur eleifend lobortis dapibus. Nunc tempus lorem a orci accumsan, quis dignissim
-                    massa ullamcorper. Nullam id blandit leo, in bibendum arcu. Pellentesque id nisi id lacus auctor
-                    luctus convallis in dolor. Suspendisse risus nulla, pulvinar sed laoreet molestie, pretium ac justo.
-                    Nam quis aliquam metus. Duis vestibulum vel sem sed euismod. Vestibulum pharetra urna id imperdiet
-                    euismod. Quisque rhoncus tincidunt molestie. Curabitur auctor maximus interdum. Donec nisi metus,
-                    accumsan sed justo ac, aliquet efficitur enim. </p>
-            </div>
-        </section>
 
-        <!-- Section Projets -->
-        <section id="projets" class="Projets">
-            <h2>Projets</h2>
-            <!-- Cartes -->
-            <div class="wrapper">
-                <div class="image">
-                    <img src="img/abri_survie.png" class="wrapper_img" onclick="openModal('modal1')">
-                    <div class="content">
-                        <h3>Abri de survie</h3>
-                    </div>
+        <main>
+            <!-- Titre du portfolio -->
+            <section class="Titre">
+                <h1>Portfolio</h1>
+            </section>
+
+            <!-- Section À propos -->
+            <section id="about" class="About">
+                <!-- Image temporaire -->
+                <img src="img/placeholder_photo.png" alt="" class="photo_profil">
+                <div class="Description">
+                    <h2>À propos</h2>
+                    <p>Je m'appelle Érick Ouellette, étudiant en technique d'intégration au multimédia au collège Montmorency. Depuis ma jeunesse, je suis passioné des jeux-vidéos et d'animation, des médiums qui poussent la créativité et qui racontent des histoires marquantes. C'est pour cela que je me suis intéressé à devenir un artiste en 3d. Dans ce site, vous verrez les projets que j'ai fait durant mes apprentissages et les compétences que j'ai acquis.</p>
                 </div>
-                <!-- Modal
-                <div id="modal1" class="modal">
-                    <span class="close" onclick="closeModal('modal1')">&times;</span>
-                    <img class="modal-content" src="img/abri_survie.png">
-                    <div class="modal-titre">Abrie de survie</div>
-                </div>-->
+            </section>
 
-                <div class="image">
-                    <img src="img/Kigo.png" class="wrapper_img" onclick="openModal('modal2')">
-                    <div class="content">
-                        <h3>Kigo</h3>
+            <!-- Section Projets -->
+            <section id="projets" class="Projets">
+                <h2>Projets</h2>
+                <!-- Cartes -->
+                <div class="wrapper">
+                    <div class="image" onclick="openModal('modal1')">
+                        <img src="img/abri_survie.png" class="wrapper_img" >
+                        <div class="content">
+                            <h3>Abri de survie</h3>
+                        </div>
+                    </div><!--Modal (pop-up)-->
+                    <div id="modal1" class="modal">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <img class="modal-content" src="img/abri_survie.png">
+                        <div class="modal-titre">Abri de survie</div>
                     </div>
-                </div>
-                <div class="image">
-                    <img src="img/koi_pond.png" class="wrapper_img" onclick="openModal('modal3')">
-                    <div class="content">
-                        <h3>Étang de carpes</h3>
+
+                    <div class="image" onclick="openModal('modal2')">
+                        <img src="img/Kigo.png" class="wrapper_img">
+                        <div class="content">
+                            <h3>Kigo</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="image">
-                    <!-- Image temporaire-->
-                    <img src="img/projet4_placeholder.png" class="wrapper_img" onclick="openModal('modal4')">
-                    <div class="content">
-                        <h3>Ville sombre</h3>
+                    <div id="modal2" class="modal">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <img class="modal-content" src="img/Kigo.png">
+                        <div class="modal-titre">Kigo</div>
                     </div>
+                    <div class="image" onclick="openModal('modal3')">
+                        <img src="img/koi_pond.png" class="wrapper_img" >
+                        <div class="content">
+                            <h3>Étang de carpes</h3>
+                        </div>
+                    </div>
+                    <div id="modal3" class="modal">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <img class="modal-content" src="img/koi_pond.png">
+                        <div class="modal-titre">Étang de carpes</div>
+                    </div>
+                    <div class="image" onclick="openModal('modal4')">
+                        <!-- Image temporaire-->
+                        <img src="img/projet4_placeholder.png" class="wrapper_img" >
+                        <div class="content">
+                            <h3>Ville sombre</h3>
+                        </div>
+                    </div>
+                    <div id="modal4" class="modal">
+                        <span class="close" onclick="closeModal('modal4')">&times;</span>
+                        <img class="modal-content" src="img/projet4_placeholder.png">
+                        <div class="modal-titre">Ville sombre</div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="compétences" class="Compétences">
+                <h2>Compétences</h2>
+                <div class="apps">
+                    <a href="https://www.figma.com/"><img src="img/figma.png"></a>
+                    <a href="https://code.visualstudio.com/"><img src="img/visual-studio.png"></a>
+                    <a href="https://www.blackmagicdesign.com/ca/products/davinciresolve"><img src="img/davinci.png"></a>
+                    <a href="https://github.com/"><img src="img/github.png"></a>
+                    <a href="https://www.adobe.com/ca/products/photoshop.html"><img src="img/photoshop.png"></a>
+                    <a href="https://www.reaper.fm/"><img src="img/reaper.png"></a>
+                    <a href="https://www.blender.org/"><img src="img/blender.png"></a>
+                    <a href="https://www.autodesk.com/ca-en/products/maya/overview"><img src="img/maya.png"></a>
                 </div>
 
-            </div>
-        </section>
 
-        <section id="compétences" class="Compétences">
-            <h2>Compétences</h2>
-            <div class="apps">
-                <a href="https://www.figma.com/"><img src="img/figma.png"></a>
-               <a href="https://code.visualstudio.com/"><img src="img/visual-studio.png"></a>
-                <a href="https://www.blackmagicdesign.com/ca/products/davinciresolve"><img src="img/davinci.png"></a>
-                <a href="https://github.com/"><img src="img/github.png"></a>
-                
-                <a href="https://www.adobe.com/ca/products/photoshop.html"><img src="img/photoshop.png"></a>  
-                <a href="https://www.reaper.fm/"><img src="img/reaper.png"></a>
-                <a href="https://www.blender.org/"><img src="img/blender.png"></a>
-                <a href="https://www.autodesk.com/ca-en/products/maya/overview"><img src="img/maya.png"></a>
-            </div>
-               
-            
-        </section>
+            </section>
 
-        <section id="contact">
-            <h2>Me contacter</h2>
-            <h3>514-714-4996</h3>
-            <h3>erickouellette1105@gmail.com</h3>
-            <a href="https://www.linkedin.com/in/%C3%A9rick-ouellette-aa4573293/"><img src="img/linkedin.png" class="linkedin"></a>
-        </section>
+            <section id="contact">
+                <h2>Me contacter</h2>
+                <h3>514-714-4996</h3>
+                <h3>erickouellette1105@gmail.com</h3>
+                <a href="https://www.linkedin.com/in/%C3%A9rick-ouellette-aa4573293/"><img src="img/linkedin.png"
+                        class="linkedin"></a>
+            </section>
 
-        <footer>
-            <p class="credits">© Érick Ouellette</p>
+            <footer>
+                <p class="credits">© Érick Ouellette</p>
 
-        </footer>
-    </main>
-</div>
+            </footer>
+        </main>
+    </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
