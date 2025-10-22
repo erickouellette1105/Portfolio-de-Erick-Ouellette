@@ -88,11 +88,11 @@ h1 {
     margin-top: 30rem;
     justify-content: center;
     grid-template-columns: auto auto;
-    column-gap: 10em;
+    column-gap: 20em;
 }
 
 .photo_profil {
-    width: 15vw;
+    width: 20vw;
     height: auto;
     border-radius: 20px;
 
@@ -103,7 +103,7 @@ h1 {
 h2 {
     display: flex;
     justify-content: center;
-    font-size: 4rem;
+    font-size: 5rem;
     margin-top: 15rem;
     color: rgb(110, 110, 110);
 
@@ -113,7 +113,7 @@ h2 {
 h2:hover {
     color: black;
     text-decoration: underline;
-    text-underline-offset: 15px;
+    text-underline-offset: 18px;
 }
 
 
@@ -122,7 +122,7 @@ h2:hover {
 .Description h2 {
     margin-top: 0;
     margin-right: 15rem;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 
@@ -137,8 +137,8 @@ p {
     display: grid;
     justify-content: center;
     grid-template-columns: auto auto;
-    column-gap: 2em;
-    row-gap: 2em;
+    column-gap: 4em;
+    row-gap: 4em;
 }
 
 .image {
