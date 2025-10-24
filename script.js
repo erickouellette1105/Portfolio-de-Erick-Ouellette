@@ -25,7 +25,11 @@ window.onclick = function (event) {
 };
 
 const app = Vue.createApp({
-
+    data() {
+        return {
+            
+        }
+    }
 })
 
 app.mount('#app');
