@@ -23,3 +23,12 @@ window.onclick = function (event) {
         }
     });
 };
+
+const app = Vue.createApp({
+
+})
+
+app.mount('#app');
+
+
+

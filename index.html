@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    
 
     <!-- Navbar du portfolio -->
     <navbar>
@@ -37,7 +38,7 @@
 
 
     </navbar>
-    <div class="vue">
+        <div id="app">
 
         <!-- Nav mobile -->
         <div class="Mobilenav">
@@ -92,17 +93,19 @@
                         </div>
                     </div><!--Modal (pop-up)-->
                     <div id="modal1" class="modal">
-                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <span class="close" onclick="closeModal('modal1')"></span>
+                        <!--Lien vers document/vidéo/site -->
                         <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e1d0a125-8168-4991-934e-fa75664159b1?viewer%21megaVerb=group-discover">
                             <img class="modal-content" src="img/abri_survie.png">
                         </a>
+                        <!--Éléments textuels de description du projet-->
                         <div class="modal-titre">Abri de survie</div>
-                        <div class="modal-cours">Modélisation 3d</div>
+                        <div class="modal-cours">3d</div>
                         <div class="modal-nombre">Projet en équipe</div>
                         <div class="modal-team">Justin Guay, Érick Ouellette, Maika Désy, Quoc Huy Do</div>
                         <div class="modal-role">Création d'objets 3d</div>
-                        <div class="modal-intro">Abri de survie est un projet de modélisation 3d inspiré du jeu project zomboid.</div>
                         <div class="modal-logiciels">Maya, Unity</div>
+                        <div class="modal-intro">Abri de survie est un projet de modélisation 3d inspiré du jeu project zomboid.</div>
                         <div class="modal-description">Cet abri aide des survivants à se protéger des zombies du monde post-apocalyptique. Et donc, l'abri est fournie de provisions et de matériaux de survie. Dans ce projet, nous avions le devoir de modéliser des objets 3d dans un contexte spécifique et les mettrent dans une scène Unity pour assembler un abri de survie.Pour ma part, j'ai modélisé la batte de baseball cloutée et la boîte de conserve.</div>
                         <div class="modal-processus">
                             <img src="img/concept-survie.png" alt="">
@@ -110,8 +113,8 @@
                             <img src="img/inspiration-survie.png" alt="">
                             <img src="img/rendu-survie.png" alt="">
                             <img src="img/rendu-final.png" alt="">
-                            Nous avons commencé par la recherche d'un concept pour notre projet. Cette inspiration était un abri de survie post-apocalyptique. Ensuite, on a fait un croquis pour démontrer ce que l'abri allait être visuellement. Avant de commencer la modélisation des objets, nous avons chercher des inspirations et après nous avons entamer la création des objets. Finalement il ne restait plus que de créer la pièce dans Unity et de faire un rendu.
                         </div>
+                        <div class="modal-processus_texte">Nous avons commencé par la recherche d'un concept pour notre projet. Cette inspiration était un abri de survie post-apocalyptique. Ensuite, on a fait un croquis pour démontrer ce que l'abri allait être visuellement. Avant de commencer la modélisation des objets, nous avons chercher des inspirations et après nous avons entamer la création des objets. Finalement il ne restait plus que de créer la pièce dans Unity et de faire un rendu.</div>
                     </div>
 
                     <div class="image" onclick="openModal('modal2')">
@@ -121,7 +124,7 @@
                         </div>
                     </div>
                     <div id="modal2" class="modal">
-                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <span class="close" onclick="closeModal('modal2')"></span>
                         <img class="modal-content" src="img/Kigo.png">
                         <div class="modal-titre">Kigo</div>
                     </div>
@@ -132,7 +135,7 @@
                         </div>
                     </div>
                     <div id="modal3" class="modal">
-                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <span class="close" onclick="closeModal('modal3')"></span>
                         <img class="modal-content" src="img/koi_pond.png">
                         <div class="modal-titre">Étang de carpes</div>
                     </div>
@@ -144,7 +147,7 @@
                         </div>
                     </div>
                     <div id="modal4" class="modal">
-                        <span class="close" onclick="closeModal('modal4')">&times;</span>
+                        <span class="close" onclick="closeModal('modal4')"></span>
                         <img class="modal-content" src="img/projet4_placeholder.png">
                         <div class="modal-titre">Ville sombre</div>
                     </div>
@@ -183,6 +186,7 @@
             </footer>
         </main>
     </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>
 

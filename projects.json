@@ -2,22 +2,43 @@
   {
     "id": 1,
     "title": "Abri de survie",
+    "link": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e1d0a125-8168-4991-934e-fa75664159b1?viewer%21megaVerb=group-discover",
     "category": "3d",
-    "images": ["./img/abri_survie.png"]
+    "image-modal": ["./img/abri_survie.png"],
+    "nombre": "Projet en équipe",
+    "team": "Justin Guay, Érick Ouellette, Maika Désy, Quoc Huy Do",
+    "role": "Modélisation 3d",
+    "logiciels": "Maya, Unity",
+    "intro": "Abri de survie est un projet de modélisation 3d inspiré du jeu project zomboid.",
+    "description": "Cet abri aide des survivants à se protéger des zombies du monde post-apocalyptique. Et donc, l'abri est fournie de provisions et de matériaux de survie. Dans ce projet, nous avions le devoir de modéliser des objets 3d dans un contexte spécifique et les mettrent dans une scène Unity pour assembler un abri de survie.Pour ma part, j'ai modélisé la batte de baseball cloutée et la boîte de conserve.",
+    "images": [
+      "img/concept-survie.png",
+      "img/croquis-survie.png",
+      "img/inspiration-survie.png",
+      "img/rendu-survie.png",
+      "img/rendu-final.png"
+    ]
     
   },
   {
     "id": 2,
     "title": "Kigo",
+    "link": "https://tim-montmorency.com/2024/projets/Kigo/docs/web/index.html",
     "category": "3d",
-    "images": ["./img/Kigo.png"]
+    "image-modal": ["img/Kigo.png"],
+    "nombre": "Projet en équipe",
+    "team": "William Rathier Mailly, Érick Ouellette, Gabriel Clerval, Nicolas St-Martin, Antoine Dion",
+    "role": "Modélisation 3d",
+    "logiciels": "Kinect studio, Unity, Maya, OBS Studio, Reaper",
+    "intro": "Kigo est un jeu interactif oû le joueur doit éviter des obstacles dans un univers inspiré de films des années 80 notammnent Tron",
+    "description": "Kigo est mon projet final de la technique oû l'objectif était de créer une expérience multimédia interactive dans l'espace d'un studio. Nous avons créer un jeu style kinect oû le but est d'esquiver des obstacles et d'accumuler des points pour gagner le plus grand score tout en offrant une activité physique intense. Mon rôle était de modéliser la majorité des éléments 3d et j'étais aussi en charge de déterminer le style visuel."
     
   },
   {
     "id": 3,
     "title": "Étang de carpes",
     "category": "3d",
-    "images": ["./img/koi_pond.png"]
+    "images": ["img/koi_pond.png"]
     
   },
   {
