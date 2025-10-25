@@ -2,17 +2,11 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 
 hamburger.addEventListener('click', () => {
-  menu.classList.toggle('active');
+    menu.classList.toggle('active');
 });
 
 
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
-}
 
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
-}
 
 // Fermer la modale si on clique en dehors du contenu
 window.onclick = function (event) {
@@ -27,12 +21,48 @@ window.onclick = function (event) {
 const app = Vue.createApp({
     data() {
         return {
-            
+            projects: []
+        };
+    },
+    mounted() {
+        console.log("vue marche");
+
+        
+        fetch("./projects.json")
+            .then(response => response.json())
+            .then(data => {
+                this.projects = data;
+                this.message = "Projets chargés avec succès";
+                console.log(this.projects);
+            })
+            .catch(error => {
+                console.error("Erreur de chargement :", error);
+                this.message = "Erreur de chargement ";
+            });
+            /* Fonction pour sortir de la modal */
+             window.addEventListener("click", this.handleOutsideClick);
+    },
+    methods: {
+        openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) modal.style.display = "block";
+        },
+        closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) modal.style.display = "none";
+        },
+        /* méthode pour fermer la modale quand on clique à l’extérieur */
+        handleOutsideClick(event) {
+            const modals = document.querySelectorAll(".modal");
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
         }
     }
-})
+});
 
 app.mount('#app');
-
 
 

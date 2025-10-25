@@ -17,7 +17,8 @@
       "img/inspiration-survie.png",
       "img/rendu-survie.png",
       "img/rendu-final.png"
-    ]
+    ],
+    "texte": "Nous avons commencé par la recherche d'un concept pour notre projet. Cette inspiration était un abri de survie post-apocalyptique. Ensuite, on a fait un croquis pour démontrer ce que l'abri allait être visuellement. Avant de commencer la modélisation des objets, nous avons chercher des inspirations et après nous avons entamer la création des objets. Finalement il ne restait plus que de créer la pièce dans Unity et de faire un rendu."
     
   },
   {
@@ -38,14 +39,14 @@
     "id": 3,
     "title": "Étang de carpes",
     "category": "3d",
-    "images": ["img/koi_pond.png"]
+    "image-modal": ["img/koi_pond.png"]
     
   },
   {
     "id": 4,
     "title": "Ville sombre",
     "category": "3d",
-    "images": ["./img/projet4_placeholder.png"]
-    
+    "image-modal": ["./img/projet4_placeholder.png"]
+
   }
 ]

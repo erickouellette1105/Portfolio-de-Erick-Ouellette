@@ -88,14 +88,13 @@ h1 {
     margin-top: 30rem;
     justify-content: center;
     grid-template-columns: auto auto;
-    column-gap: 20em;
+    column-gap: 10em;
 }
 
 .photo_profil {
-    width: 20vw;
+    width: 25vw;
     height: auto;
-    border-radius: 20px;
-
+    border-radius: 5px;
 }
 
 /* Style des titres */
@@ -212,6 +211,7 @@ p {
     border: none;
 }
 
+/* Placement de l'image de la modale  */
 .modal-content {
     background-color: white;
     display: block;
@@ -221,6 +221,7 @@ p {
     height: auto;
 
 }
+
 
 .close {
     position: absolute;
@@ -240,12 +241,12 @@ p {
     font-family: "Alegreya";
 }
 
+
 .modal-cours {
     color: white;
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
-    
     font-family: "Alegreya";
 }
 
@@ -316,7 +317,7 @@ p {
     font-size: 1.2rem;
     width: 60rem;
     margin-top: 20px;
-     margin-left: 50rem;
+    margin-left: 50rem;
     font-family: "Alegreya";
 }
 
@@ -571,6 +572,39 @@ footer {
     .content:hover>* {
         transform: translateY(0px);
     }
+
+    .modal-description {
+        color: white;
+        text-align: center;
+        font-size: 1.2rem;
+        width: 21rem;
+        margin-left: 2.5rem;
+        margin-top: 40px;
+        font-family: "Alegreya";
+    }
+
+    .modal-processus {
+        color: white;
+        font-size: 1rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+        display: grid;
+        justify-content: center;
+        grid-template-columns: auto;
+        gap: 5px;
+    }
+
+    .modal-processus_texte {
+        color: white;
+        text-align: center;
+        font-size: 1.2rem;
+        width: 21rem;
+        margin-left: 2.5rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+       
+    }
+
 
     .apps {
         display: grid;
