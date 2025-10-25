@@ -1,3 +1,14 @@
+:root {
+    --bg-color: #ffff;
+    --text-color: black;
+    
+}
+
+.dark {
+    --bg-color: black;
+    --text-color: white;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -16,8 +27,8 @@ main {
 
 /* Navbar */
 .nav-list {
-    background-color: #ffff;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--bg-color);
+    box-shadow: 5px 5px 20px var(--text-color);
     margin: 0;
     padding: 1rem 0;
     /* Alignement au centre */
@@ -112,7 +123,7 @@ h2 {
 h2:hover {
     color: black;
     text-decoration: underline;
-    text-underline-offset: 18px;
+    text-underline-offset: 19px;
 }
 
 
