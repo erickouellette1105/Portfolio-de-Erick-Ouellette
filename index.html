@@ -88,7 +88,7 @@
                 <div class="wrapper">
                     <div class="image" v-for="(project, index) in projects" :key="project.id"
                         @click="openModal('modal' + project.id)">
-                        <img :src="project.image-modal ? project.image-modal[0] : project['image-modal']?.[0]"
+                        <img :src="project['image-modal']"
                             class="wrapper_img">
                         <div class="content">
                             <h3>{{project.title}}</h3>
@@ -97,9 +97,10 @@
                     <div class="modal" v-for="project in projects" :id="'modal' + project.id"
                         :key="'modal' + project.id">
                         <span class="close" @click="closeModal('modal' + project.id)"></span>
-                        <!--Lien vers document/vidéo/site -->
+                        <!--Lien vers document/vidéo/site -->    <!-- Target blank permet d'ouvrir le lien vers une autre fenêtre-->
                         <a v-if="project.link" :href="project.link" target="_blank">
-                            <img class="modal-content" :src="project['image-modal'] ? project['image-modal'][0] : project.images?.[0]">
+                                                                              
+                            <img class="modal-content" :src="project['image-modal']">
                         </a>
                         <!--Éléments textuels de description du projet-->
                         <div class="modal-titre">{{project.title}}</div>
@@ -110,8 +111,9 @@
                         <div class="modal-logiciels">{{project.logiciels}}</div>
                         <div class="modal-intro">{{project.intro}}</div>
                         <div class="modal-description">{{project.description}}</div>
+                                                      <!-- Ceci fait en sorte d'afficher les images d'un seul projet -->
                         <div class="modal-processus" v-if="project.images && project.images.length > 0">
-                            <img v-for="(img, i) in project.images" :src="img" :key="i" alt="">
+                            <img v-for="(img, i) in project.images" :src="project['images']"  alt="">
                             
                         </div>
                         <div class="modal-processus_texte">{{project.texte}}</div>

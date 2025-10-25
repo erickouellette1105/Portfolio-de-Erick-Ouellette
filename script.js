@@ -8,15 +8,7 @@ hamburger.addEventListener('click', () => {
 
 
 
-// Fermer la modale si on clique en dehors du contenu
-window.onclick = function (event) {
-    const modals = document.querySelectorAll(".modal");
-    modals.forEach(function (modal) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-};
+
 
 const app = Vue.createApp({
     data() {
