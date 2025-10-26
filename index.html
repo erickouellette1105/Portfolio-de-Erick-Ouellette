@@ -14,31 +14,34 @@
 </head>
 
 <body>
-
-
-    <!-- Navbar du portfolio -->
-    <navbar>
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a href="index.html" class="link-logo">Érick Ouellette</a>
-            </li>
-            <li class="nav-item">
-                <a href="#about" class="link">À propos</a>
-            </li>
-            <li class="nav-item">
-                <a href="#projets" class="link">Projets</a>
-            </li>
-            <li class="nav-item">
-                <a href="#compétences" class="link">Compétences</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contact" class="link">Me contacter</a>
-            </li>
-        </ul>
-
-
-    </navbar>
     <div id="app">
+
+        <!-- Navbar du portfolio -->
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="link-logo">Érick Ouellette</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="link">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projets" class="link">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#compétences" class="link">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="link">Me contacter</a>
+                </li>
+                <li class="nav-item">
+                    <button @click="toggleTheme" class="toggle"></button>
+                </li>
+            </ul>
+
+
+        </nav>
+
 
         <!-- Nav mobile -->
         <div class="Mobilenav">
@@ -57,7 +60,9 @@
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#compétences">Compétences</a></li>
                 <li><a href="#contact">Me contacter</a></li>
-                <button @click="toggleTheme" class="theme-toggle">i</button>
+                <li><button @click="toggleTheme" class="toggle_menu">
+
+                    </button></li>
             </ul>
         </nav>
 
@@ -89,8 +94,7 @@
                 <div class="wrapper">
                     <div class="image" v-for="(project, index) in projects" :key="project.id"
                         @click="openModal('modal' + project.id)">
-                        <img :src="project['image-modal']"
-                            class="wrapper_img">
+                        <img :src="project['image-modal']" class="wrapper_img">
                         <div class="content">
                             <h3>{{project.title}}</h3>
                         </div>
@@ -98,9 +102,10 @@
                     <div class="modal" v-for="project in projects" :id="'modal' + project.id"
                         :key="'modal' + project.id">
                         <span class="close" @click="closeModal('modal' + project.id)"></span>
-                        <!--Lien vers document/vidéo/site -->    <!-- Target blank permet d'ouvrir le lien vers une autre fenêtre-->
+                        <!--Lien vers document/vidéo/site -->
+                        <!-- Target blank permet d'ouvrir le lien vers une autre fenêtre-->
                         <a v-if="project.link" :href="project.link" target="_blank">
-                                                                              
+
                             <img class="modal-content" :src="project['image-modal']">
                         </a>
                         <!--Éléments textuels de description du projet-->
@@ -112,10 +117,9 @@
                         <div class="modal-logiciels">{{project.logiciels}}</div>
                         <div class="modal-intro">{{project.intro}}</div>
                         <div class="modal-description">{{project.description}}</div>
-                                                      <!-- Ceci fait en sorte d'afficher les images d'un seul projet -->
+                        <!-- Ceci fait en sorte d'afficher les images d'un seul projet -->
                         <div class="modal-processus" v-if="project.images && project.images.length > 0">
-                            <img v-for="(img, i) in project.images" :src="project['images']"  alt="">
-                            
+                            <img v-for="(img, i) in project.images" :src="img" :key="i" alt="">
                         </div>
                         <div class="modal-processus_texte">{{project.texte}}</div>
                     </div>

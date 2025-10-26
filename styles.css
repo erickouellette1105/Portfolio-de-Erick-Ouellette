@@ -1,12 +1,13 @@
 :root {
     --bg-color: #ffff;
     --text-color: black;
-    
+    --rgba-color: rgba(0, 0, 0, 0.5);
 }
 
-.dark {
+body.dark {
     --bg-color: black;
     --text-color: white;
+    --rgba-color: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -18,11 +19,12 @@ html,
 body {
     height: 100%;
     margin: 0;
-    background-color: #ffff;
+    background-color: var(--bg-color);
 }
 
 main {
     margin-top: 30px;
+    background-color: var(--bg-color);
 }
 
 /* Navbar */
@@ -41,6 +43,15 @@ main {
 
 
 }
+
+
+.toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--text-color);
+}
+
 
 /* Menu hamburger caché */
 
@@ -63,12 +74,12 @@ main {
     text-decoration: none;
     color: rgb(110, 110, 110);
     font-family: "Alegreya";
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* Effet survol */
 .nav-item a:hover {
-    color: black;
+    color: var(--text-color);
     text-decoration: underline;
     text-underline-offset: 6px;
 }
@@ -81,6 +92,7 @@ main {
 
 /* Titre Portfolio */
 h1 {
+    color: var(--text-color);
     font-size: 15rem;
     font-style: italic;
     font-family: "Alegreya";
@@ -121,9 +133,9 @@ h2 {
 
 /* Effet survol sur les titres */
 h2:hover {
-    color: black;
+    color: var(--text-color);
     text-decoration: underline;
-    text-underline-offset: 19px;
+    text-underline-offset: 25px;
 }
 
 
@@ -140,7 +152,10 @@ h2:hover {
 p {
     width: 25rem;
     font-family: "Alegreya";
+    color: var(--text-color);
 }
+
+
 
 /* Conteneur des cartes "Parent" */
 .wrapper {
@@ -161,7 +176,7 @@ p {
     width: 100%;
     display: block;
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     border-radius: 5px;
 }
 
@@ -187,7 +202,7 @@ p {
 /* Effet survol qui dévoile le titre */
 .image:hover .content {
     opacity: 1;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px var(--text-color);
 }
 
 /* Titre de la carte */
@@ -218,13 +233,13 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: var(--bg-color);
     border: none;
 }
 
 /* Placement de l'image de la modale  */
 .modal-content {
-    background-color: white;
+    background-color: var(--bg-color);
     display: block;
     margin: auto;
     max-width: 80%;
@@ -245,7 +260,7 @@ p {
 }
 
 .modal-titre {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 2rem;
     margin-top: 20px;
@@ -254,7 +269,7 @@ p {
 
 
 .modal-cours {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
@@ -262,7 +277,7 @@ p {
 }
 
 .modal-nombre {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
@@ -270,7 +285,7 @@ p {
 }
 
 .modal-team {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
@@ -278,7 +293,7 @@ p {
 }
 
 .modal-role {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
@@ -286,7 +301,7 @@ p {
 }
 
 .modal-logiciels {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
@@ -294,7 +309,7 @@ p {
 }
 
 .modal-intro {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
@@ -302,7 +317,7 @@ p {
 }
 
 .modal-description {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.2rem;
     width: 55rem;
@@ -312,7 +327,7 @@ p {
 }
 
 .modal-processus {
-    color: white;
+    color: var(--text-color);
     font-size: 1rem;
     margin-top: 20px;
     font-family: "Alegreya";
@@ -322,13 +337,18 @@ p {
     gap: 15px;
 }
 
+.modal-processus img {
+    max-width: 20rem;
+}
+
 .modal-processus_texte {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.2rem;
-    width: 60rem;
+    max-width: 120rem;
     margin-top: 20px;
-    margin-left: 50rem;
+    margin-bottom: 20px;
+    margin-left: 15rem;
     font-family: "Alegreya";
 }
 
@@ -354,7 +374,6 @@ h3 {
 .apps img:hover {
     transform: translateY(-10px) scale(1.2);
     transition: transform 0.2s;
-
 }
 
 /* Logo Linkedin */
@@ -365,6 +384,10 @@ h3 {
     margin: auto;
     width: 6rem;
     padding-bottom: 4rem;
+}
+
+#contact {
+    color: var(--text-color);
 }
 
 
@@ -390,8 +413,8 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 15px 20px;
-        background-color: #f8f8f8;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        background-color: var(--bg-color);
+        box-shadow: 0 1px 4px var(--rgba-color);
         position: sticky;
 
     }
@@ -399,7 +422,7 @@ footer {
     .logo {
         font-size: 2rem;
         text-decoration: none;
-        color: inherit;
+        color: var(--text-color);
     }
 
 
@@ -420,16 +443,24 @@ footer {
     .hamburger span {
         display: block;
         height: 4px;
-        background: #333;
+        background: var(--text-color);
         border-radius: 2px;
         transition: 0.3s;
     }
 
+    .toggle_menu {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: var(--text-color);
+        margin-top: 20px;
+    }
+
     .menu {
         display: none;
-        background: rgb(255, 255, 255);
+        background: var(--bg-color);
         padding: 20px;
-        box-shadow: 0 0 20px black;
+        box-shadow: 0 0 20px var(--text-color);
     }
 
     .menu ul {
@@ -445,7 +476,7 @@ footer {
 
     a {
         text-decoration: none;
-        color: inherit;
+        color: var(--text-color);
     }
 
     /* Toggle class */
@@ -461,6 +492,7 @@ footer {
         display: flex;
         justify-content: center;
         margin-top: 7rem;
+        color: var(--text-color);
     }
 
     /* Espacement de la section À propos */
@@ -475,7 +507,6 @@ footer {
 
     .photo_profil {
         width: 20rem;
-
         border-radius: 20px;
 
     }
@@ -492,7 +523,7 @@ footer {
 
     /* Effet survol sur les titres */
     h2:hover {
-        color: black;
+        color: var(--text-color);
         text-decoration: underline;
         text-underline-offset: 15px;
     }
@@ -503,9 +534,6 @@ footer {
         padding: 2rem;
         font-family: "Alegreya";
     }
-
-
-
 
     /* Style unique de position pour ce titre */
     .Description h2 {
@@ -541,7 +569,7 @@ footer {
         width: 100%;
         display: block;
         margin: auto;
-        border: 1px solid black;
+        border: 1px solid var(--text-color);
         border-radius: 5px;
     }
 
@@ -584,36 +612,97 @@ footer {
         transform: translateY(0px);
     }
 
+    .modal-titre {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+    }
+
+
+    .modal-cours {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+    }
+
+    .modal-nombre {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+    }
+
+    .modal-team {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+    }
+
+    .modal-role {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+    }
+
+    .modal-logiciels {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+    }
+
+    .modal-intro {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 1.3rem;
+        margin-top: 20px;
+        font-family: "Alegreya";
+    }
+
     .modal-description {
-        color: white;
+        color: var(--text-color);
         text-align: center;
         font-size: 1.2rem;
-        width: 21rem;
-        margin-left: 2.5rem;
+        width: 20rem;
+        margin-left: 3rem;
         margin-top: 40px;
         font-family: "Alegreya";
     }
 
     .modal-processus {
-        color: white;
+        color: var(--text-color);
         font-size: 1rem;
         margin-top: 20px;
         font-family: "Alegreya";
         display: grid;
         justify-content: center;
         grid-template-columns: auto;
-        gap: 5px;
+        gap: 15px;
+    }
+
+    .modal-processus img {
+        width: 20rem;
     }
 
     .modal-processus_texte {
-        color: white;
+        color: var(--text-color);
         text-align: center;
         font-size: 1.2rem;
-        width: 21rem;
-        margin-left: 2.5rem;
+        width: 23rem;
         margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 1.5rem;
         font-family: "Alegreya";
-       
     }
 
 
@@ -644,6 +733,10 @@ footer {
         margin: auto;
         width: 6rem;
         padding-bottom: 4rem;
+    }
+
+    #contact {
+        color: var(--text-color);
     }
 
 

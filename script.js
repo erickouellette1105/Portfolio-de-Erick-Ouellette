@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const app = Vue.createApp({
     data() {
         return {
-            projects: []
+            projects: [],
+            isDark: false,
         };
     },
     mounted() {
@@ -55,6 +56,11 @@ const app = Vue.createApp({
                     modal.style.display = "none";
                 }
             });
+        },
+        /* Fonction pour toggle le dark/light thème */
+        toggleTheme() {
+            this.isDark =!this.isDark
+            document.body.classList.toggle('dark', this.isDark)
         }
     }
 });
