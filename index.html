@@ -92,7 +92,7 @@
                 <h2>Projets</h2>
                 <!-- Cartes -->
                 <div class="wrapper">
-                    <div class="image" v-for="(project, index) in projects" :key="project.id"
+                    <div class="image" v-for="project in projects" :key="project.id"
                         @click="openModal('modal' + project.id)">
                         <img :src="project['image-modal']" class="wrapper_img">
                         <div class="content">
@@ -148,7 +148,7 @@
 
             <section id="contact">
                 <h2>Me contacter</h2>
-                <h3>514-714-4996</h3>
+                
                 <h3>erickouellette1105@gmail.com</h3>
                 <a href="https://www.linkedin.com/in/%C3%A9rick-ouellette-aa4573293/"><img src="img/linkedin.png"
                         class="linkedin"></a>
