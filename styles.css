@@ -5,7 +5,7 @@
 }
 
 body.dark {
-    --bg-color: black;
+    --bg-color: rgb(14, 14, 14);
     --text-color: white;
     --rgba-color: rgba(255, 255, 255, 0.5);
 }
@@ -45,6 +45,7 @@ main {
 }
 
 
+/* Bouton clair/sombre */
 .toggle {
     width: 50px;
     height: 50px;
@@ -81,7 +82,7 @@ main {
 .nav-item a:hover {
     color: var(--text-color);
     text-decoration: underline;
-    text-underline-offset: 6px;
+    text-underline-offset: 8px;
 }
 
 /* Style Italique sur le logo */
@@ -91,7 +92,7 @@ main {
 }
 
 /* Titre Portfolio */
-h1 {
+.portfolio {
     color: var(--text-color);
     font-size: 15rem;
     font-style: italic;
@@ -99,10 +100,10 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 15rem;
-}
+    opacity: 1;
+ }
 
 /* Espacement de la section À propos */
-
 .About {
     display: grid;
     justify-content: center;
@@ -111,7 +112,7 @@ h1 {
     margin-top: 30rem;
     justify-content: center;
     grid-template-columns: auto auto;
-    column-gap: 10em;
+    column-gap: 5em;
 }
 
 .photo_profil {
@@ -143,7 +144,7 @@ h2:hover {
 /* Style unique de position pour ce titre */
 .Description h2 {
     margin-top: 0;
-    margin-right: 15rem;
+    margin-right: 10rem;
     font-size: 4rem;
 }
 
@@ -195,8 +196,9 @@ p {
     opacity: 0;
     transition: 0.2s;
     border-radius: 5px;
-    pointer-events: none;
     /* Ceci prévient l'interruption de l'effet hover que le Onclick causait */
+    pointer-events: none;
+
 }
 
 /* Effet survol qui dévoile le titre */
@@ -242,8 +244,8 @@ p {
     background-color: var(--bg-color);
     display: block;
     margin: auto;
-    max-width: 80%;
-    width: 700px;
+    width: 40vw;
+    border: 0.1px solid var(--text-color);
     height: auto;
 
 }
@@ -262,7 +264,7 @@ p {
 .modal-titre {
     color: var(--text-color);
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-top: 20px;
     font-family: "Alegreya";
 }
@@ -270,7 +272,6 @@ p {
 
 .modal-cours {
     color: var(--text-color);
-    text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
     font-family: "Alegreya";
@@ -278,7 +279,6 @@ p {
 
 .modal-nombre {
     color: var(--text-color);
-    text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
     font-family: "Alegreya";
@@ -288,13 +288,12 @@ p {
     color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
-    margin-top: 20px;
+    margin-top: 50px;
     font-family: "Alegreya";
 }
 
 .modal-role {
     color: var(--text-color);
-    text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
     font-family: "Alegreya";
@@ -302,7 +301,6 @@ p {
 
 .modal-logiciels {
     color: var(--text-color);
-    text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
     font-family: "Alegreya";
@@ -312,7 +310,7 @@ p {
     color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
-    margin-top: 20px;
+    margin-top: 50px;
     font-family: "Alegreya";
 }
 
@@ -322,7 +320,7 @@ p {
     font-size: 1.2rem;
     width: 55rem;
     margin-left: 50rem;
-    margin-top: 40px;
+    margin-top: 50px;
     font-family: "Alegreya";
 }
 
@@ -337,18 +335,26 @@ p {
     gap: 15px;
 }
 
+.modal-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    column-gap: 5rem;
+}
+
+
 .modal-processus img {
-    max-width: 20rem;
+    max-width: 15rem;
 }
 
 .modal-processus_texte {
     color: var(--text-color);
     text-align: center;
     font-size: 1.2rem;
-    max-width: 120rem;
+    max-width: 60rem;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 15rem;
+    margin-left: 47rem;
     font-family: "Alegreya";
 }
 
@@ -485,7 +491,7 @@ footer {
     }
 
     /* Titre Portfolio */
-    h1 {
+    .portfolio {
         font-size: 3rem;
         font-style: italic;
         font-family: "Alegreya";
@@ -506,10 +512,12 @@ footer {
     }
 
     .photo_profil {
-        width: 20rem;
+        width: 24rem;
         border-radius: 20px;
 
     }
+
+  
 
     h2 {
         display: flex;
@@ -612,6 +620,17 @@ footer {
         transform: translateY(0px);
     }
 
+    /* Placement de l'image de la modale  */
+    .modal-content {
+        background-color: var(--bg-color);
+        display: block;
+        margin: auto;
+        width: 80vw;
+        border: 0.1px solid var(--text-color);
+        height: auto;
+
+    }
+
     .modal-titre {
         color: var(--text-color);
         text-align: center;
@@ -703,6 +722,13 @@ footer {
         margin-bottom: 20px;
         margin-left: 1.5rem;
         font-family: "Alegreya";
+    }
+
+    .modal-grid {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        column-gap: 1rem;
     }
 
 

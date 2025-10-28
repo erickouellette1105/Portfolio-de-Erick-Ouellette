@@ -3,12 +3,14 @@
     "id": 1,
     "title": "Abri de survie",
     "link": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e1d0a125-8168-4991-934e-fa75664159b1?viewer%21megaVerb=group-discover",
-    "category": "3d",
-    "image-modal": ["./img/abri_survie.png"],
-    "nombre": "Projet en équipe",
+    "category": "Projet 3d",
+    "image-modal": [
+      "./img/abri_survie.png"
+    ],
+    "nombre": "Équipe",
     "team": "Justin Guay, Érick Ouellette, Maika Désy, Quoc Huy Do",
-    "role": "Modélisation 3d",
-    "logiciels": "Maya, Unity",
+    "role": "Rôle: Modélisation 3d",
+    "logiciels": "Logiciels: Maya, Unity",
     "intro": "Abri de survie est un projet de modélisation 3d inspiré du jeu project zomboid.",
     "description": "Cet abri aide des survivants à se protéger des zombies du monde post-apocalyptique. Et donc, l'abri est fournie de provisions et de matériaux de survie. Dans ce projet, nous avions le devoir de modéliser des objets 3d dans un contexte spécifique et les mettrent dans une scène Unity pour assembler un abri de survie.Pour ma part, j'ai modélisé la batte de baseball cloutée et la boîte de conserve.",
     "images": [
@@ -19,34 +21,50 @@
       "img/rendu-final.png"
     ],
     "texte": "Nous avons commencé par la recherche d'un concept pour notre projet. Cette inspiration était un abri de survie post-apocalyptique. Ensuite, on a fait un croquis pour démontrer ce que l'abri allait être visuellement. Avant de commencer la modélisation des objets, nous avons chercher des inspirations et après nous avons entamer la création des objets. Finalement il ne restait plus que de créer la pièce dans Unity et de faire un rendu."
-    
   },
   {
     "id": 2,
     "title": "Kigo",
     "link": "https://tim-montmorency.com/2024/projets/Kigo/docs/web/index.html",
-    "category": "3d",
-    "image-modal": ["img/Kigo.png"],
-    "nombre": "Projet en équipe",
+    "category": "Projet 3d",
+    "image-modal": [
+      "img/Kigo.png"
+    ],
+    "nombre": "Équipe",
     "team": "William Rathier Mailly, Érick Ouellette, Gabriel Clerval, Nicolas St-Martin, Antoine Dion",
-    "role": "Modélisation 3d",
+    "role": "Modélisation 3d/Rigging",
     "logiciels": "Kinect studio, Unity, Maya, OBS Studio, Reaper",
     "intro": "Kigo est un jeu interactif oû le joueur doit éviter des obstacles dans un univers inspiré de films des années 80 notammnent Tron",
     "description": "Kigo est mon projet final de la technique oû l'objectif était de créer une expérience multimédia interactive dans l'espace d'un studio. Nous avons créer un jeu style kinect oû le but est d'esquiver des obstacles et d'accumuler des points pour gagner le plus grand score tout en offrant une activité physique intense. Mon rôle était de modéliser la majorité des éléments 3d et j'étais aussi en charge de déterminer le style visuel."
-    
   },
   {
     "id": 3,
-    "title": "Étang de carpes",
-    "category": "3d",
-    "image-modal": ["img/koi_pond.png"]
-    
+    "title": "Étang de poissons",
+    "link": "https://youtu.be/6905QmNpdVw",
+    "category": "Projet 3d",
+    "image-modal": [
+      "img/koi_pond.png"
+    ],
+    "nombre": "Équipe",
+    "team": "Justin Guay, Érick Ouellette",
+    "role": "Modélisation et animation 3d",
+    "logiciels": "Maya, Reaper, DaVinci Resolve",
+    "intro": "Étang de poissons est un projet 3d inspiré d'une machine de rube goldberg et des étang de poissons",
+    "description": "Ce projet était le grand projet de mon cours d'animation 3d oû l'objectif était d'animer une multitude d'objets 3d. Nous avons créer une machine qui exécute la tàche de d'amener l'eau aux poissons avec une réaction en chaine d'évènements. Mon rôle était de modéliser et d'animer certains éléments de la scène tel que l'eau, les billes, le poisson, l'eau et le récipient qui contient l'étang."
   },
   {
     "id": 4,
-    "title": "Ville sombre",
+    "link": "https://youtu.be/vVpJtjzArY0",
+    "title": "Fusion",
     "category": "3d",
-    "image-modal": ["./img/projet4_placeholder.png"]
-
+    "image-modal": [
+      "./img/fusion.png"
+    ],
+    "nombre": "Équipe",
+    "team": "Justin Guay, Érick Ouellette, Jacob Alarie-Brousseau",
+    "role": "Acteur, Montage, Animation/illustration 2d",
+    "logiciels": "Illustrator, After Effects, DaVinci Resolve",
+    "intro": "Fusion est un projet de montage sonore inspiré d'un poème écrit par des élèves d'une autre technique au cégep montmorency.",
+    "description": "Ce court métrage qui doit son nom au poème Fusion avait l'objectif de démontrer le message de fusion. Nous avons créer un court métrage oû le personnage principal essaie de régler un problème nucléaire à la centrale mais ne peux pas le stopper ce qui l'amène au désespoir. Mon rôle était de jouer le personnage, de faire le montage vidéo, de créer des illustrations et de les animer."
   }
 ]

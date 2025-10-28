@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -35,6 +36,7 @@
                     <a href="#contact" class="link">Me contacter</a>
                 </li>
                 <li class="nav-item">
+                    <!-- Bouton clair/sombre-->
                     <button @click="toggleTheme" class="toggle"></button>
                 </li>
             </ul>
@@ -60,9 +62,8 @@
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#compétences">Compétences</a></li>
                 <li><a href="#contact">Me contacter</a></li>
-                <li><button @click="toggleTheme" class="toggle_menu">
-
-                    </button></li>
+                <!-- Bouton clair/sombre-->
+                <li><button @click="toggleTheme" class="toggle_menu"></button></li>
             </ul>
         </nav>
 
@@ -70,13 +71,12 @@
         <main>
             <!-- Titre du portfolio -->
             <section class="Titre">
-                <h1>Portfolio</h1>
+                <h1 class="portfolio">Portfolio</h1>
             </section>
 
             <!-- Section À propos -->
             <section id="about" class="About">
-                <!-- Image temporaire -->
-                <img src="img/placeholder_photo.png" alt="" class="photo_profil">
+                <img src="img/erick_ouellette.png" alt="" class="photo_profil">
                 <div class="Description">
                     <h2>À propos</h2>
                     <p>Je m'appelle Érick Ouellette, étudiant en technique d'intégration au multimédia au collège
@@ -94,7 +94,7 @@
                 <div class="wrapper">
                     <div class="image" v-for="project in projects" :key="project.id"
                         @click="openModal('modal' + project.id)">
-                        <img :src="project['image-modal']" class="wrapper_img">
+                        <img :src="project['image-modal']" class="wrapper_img" alt="">
                         <div class="content">
                             <h3>{{project.title}}</h3>
                         </div>
@@ -104,17 +104,19 @@
                         <span class="close" @click="closeModal('modal' + project.id)"></span>
                         <!--Lien vers document/vidéo/site -->
                         <!-- Target blank permet d'ouvrir le lien vers une autre fenêtre-->
+                        <h1 class="modal-titre">{{project.title}}</h1>
                         <a v-if="project.link" :href="project.link" target="_blank">
-
                             <img class="modal-content" :src="project['image-modal']">
                         </a>
                         <!--Éléments textuels de description du projet-->
-                        <div class="modal-titre">{{project.title}}</div>
-                        <div class="modal-cours">{{project.category}}</div>
-                        <div class="modal-nombre">{{project.nombre}}</div>
+
+                        <div class="modal-grid">
+                            <div class="modal-cours">{{project.category}}</div>
+                            <div class="modal-nombre">{{project.nombre}}</div>
+                            <div class="modal-role">{{project.role}}</div>
+                            <div class="modal-logiciels">{{project.logiciels}}</div>
+                        </div>
                         <div class="modal-team">{{project.team}}</div>
-                        <div class="modal-role">{{project.role}}</div>
-                        <div class="modal-logiciels">{{project.logiciels}}</div>
                         <div class="modal-intro">{{project.intro}}</div>
                         <div class="modal-description">{{project.description}}</div>
                         <!-- Ceci fait en sorte d'afficher les images d'un seul projet -->
@@ -132,15 +134,14 @@
             <section id="compétences" class="Compétences">
                 <h2>Compétences</h2>
                 <div class="apps">
-                    <a href="https://www.figma.com/"><img src="img/figma.png"></a>
-                    <a href="https://code.visualstudio.com/"><img src="img/visual-studio.png"></a>
-                    <a href="https://www.blackmagicdesign.com/ca/products/davinciresolve"><img
-                            src="img/davinci.png"></a>
-                    <a href="https://github.com/"><img src="img/github.png"></a>
-                    <a href="https://www.adobe.com/ca/products/photoshop.html"><img src="img/photoshop.png"></a>
-                    <a href="https://www.reaper.fm/"><img src="img/reaper.png"></a>
-                    <a href="https://www.blender.org/"><img src="img/blender.png"></a>
-                    <a href="https://www.autodesk.com/ca-en/products/maya/overview"><img src="img/maya.png"></a>
+                    <a href="https://www.figma.com/"><img src="img/figma.png" alt=""></a>
+                    <a href="https://code.visualstudio.com/"><img src="img/visual-studio.png" alt=""></a>
+                    <a href="https://www.blackmagicdesign.com/ca/products/davinciresolve"><img src="img/davinci.png" alt=""></a>
+                    <a href="https://github.com/"><img src="img/github.png" alt=""></a>
+                    <a href="https://www.adobe.com/ca/products/photoshop.html"><img src="img/photoshop.png" alt=""></a>
+                    <a href="https://www.reaper.fm/"><img src="img/reaper.png" alt=""></a>
+                    <a href="https://www.blender.org/"><img src="img/blender.png" alt=""></a>
+                    <a href="https://www.autodesk.com/ca-en/products/maya/overview"><img src="img/maya.png" alt=""></a>
                 </div>
 
 
@@ -148,18 +149,16 @@
 
             <section id="contact">
                 <h2>Me contacter</h2>
-                
                 <h3>erickouellette1105@gmail.com</h3>
-                <a href="https://www.linkedin.com/in/%C3%A9rick-ouellette-aa4573293/"><img src="img/linkedin.png"
-                        class="linkedin"></a>
+                <a href="https://www.linkedin.com/in/%C3%A9rick-ouellette-aa4573293/"><img src="img/linkedin.png" class="linkedin"></a>
             </section>
 
             <footer>
                 <p class="credits">© Érick Ouellette</p>
-
             </footer>
         </main>
     </div>
+
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>

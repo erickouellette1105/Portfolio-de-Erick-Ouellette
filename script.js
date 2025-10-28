@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const menu = document.getElementById('menu');
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
 
-  if (hamburger && menu) {
-    hamburger.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  }
+    if (hamburger && menu) {
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    }
 });
-
 
 
 
@@ -23,8 +22,17 @@ const app = Vue.createApp({
     },
     mounted() {
         console.log("vue marche");
+        /* Animation gsap */
+        gsap.from(".portfolio", {
+            opacity: 0,
+            y: 100,
+            duration: 2,
+            ease: "power3.out",
+            delay: 0.2
+        });
 
-        
+
+        /* Fetch */
         fetch("./projects.json")
             .then(response => response.json())
             .then(data => {
@@ -32,12 +40,13 @@ const app = Vue.createApp({
                 this.message = "Projets chargés avec succès";
                 console.log(this.projects);
             })
+            /* Message d'erreur s'il y a erreur */
             .catch(error => {
                 console.error("Erreur de chargement :", error);
                 this.message = "Erreur de chargement ";
             });
-            /* Fonction pour sortir de la modal */
-             window.addEventListener("click", this.handleOutsideClick);
+        /* Fonction pour sortir de la modal */
+        window.addEventListener("click", this.handleOutsideClick);
     },
     methods: {
         openModal(id) {
@@ -59,7 +68,7 @@ const app = Vue.createApp({
         },
         /* Fonction pour toggle le dark/light thème */
         toggleTheme() {
-            this.isDark =!this.isDark
+            this.isDark = !this.isDark
             document.body.classList.toggle('dark', this.isDark)
         }
     }
