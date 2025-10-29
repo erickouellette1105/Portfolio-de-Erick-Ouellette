@@ -66,7 +66,7 @@ main {
 /* Espacement et style des liens de navbar */
 .nav-item {
     list-style: none;
-    margin-right: 12.5rem;
+    margin-right: 7rem;
 }
 
 .nav-item a {
@@ -177,7 +177,6 @@ p {
     width: 100%;
     display: block;
     margin: auto;
-    
     border-radius: 5px;
 }
 
@@ -243,12 +242,13 @@ p {
 /* Placement de l'image de la modale  */
 .modal-content {
     background-color: var(--bg-color);
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     width: 40vw;
     border: 0.1px solid var(--text-color);
     height: auto;
-
 }
 
 /* Élément pour fermer la modal */
@@ -320,8 +320,6 @@ p {
     color: var(--text-color);
     text-align: center;
     font-size: 1.2rem;
-    width: 55rem;
-    margin-left: 50rem;
     margin-top: 50px;
     font-family: "Alegreya";
 }
@@ -355,10 +353,8 @@ p {
     color: var(--text-color);
     text-align: center;
     font-size: 1.2rem;
-    max-width: 60rem;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 47rem;
     font-family: "Alegreya";
 }
 
