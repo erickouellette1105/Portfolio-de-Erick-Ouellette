@@ -1,3 +1,4 @@
+/* Menu hamburger */
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
@@ -22,7 +23,7 @@ const app = Vue.createApp({
     },
     mounted() {
         console.log("vue marche");
-        /* Animation gsap */
+        /* Animation gsap d'apparition et du mouvement du titre*/
         gsap.from(".portfolio", {
             opacity: 0,
             y: 100,

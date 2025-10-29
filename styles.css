@@ -1,17 +1,15 @@
+/* Variables de couleurs mode clair */
 :root {
     --bg-color: #ffff;
     --text-color: black;
     --rgba-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Variables de couleurs mode sombre */
 body.dark {
     --bg-color: rgb(14, 14, 14);
     --text-color: white;
     --rgba-color: rgba(255, 255, 255, 0.5);
-}
-
-* {
-    box-sizing: border-box;
 }
 
 
@@ -115,6 +113,7 @@ main {
     column-gap: 5em;
 }
 
+/* Photo profil */
 .photo_profil {
     width: 25vw;
     height: auto;
@@ -128,6 +127,7 @@ h2 {
     justify-content: center;
     font-size: 5rem;
     margin-top: 15rem;
+    /* Couleur de base qui sera modifié en survol */
     color: rgb(110, 110, 110);
 
 }
@@ -136,6 +136,7 @@ h2 {
 h2:hover {
     color: var(--text-color);
     text-decoration: underline;
+    /* Un offset permet au soulignage de paraître plus naturel et de ne pas acrocher le texte */
     text-underline-offset: 25px;
 }
 
@@ -170,7 +171,6 @@ p {
 .image {
     width: 100%;
     position: relative;
-
 }
 
 .wrapper_img {
@@ -188,6 +188,7 @@ p {
     position: absolute;
     top: 0;
     left: 0;
+    /* Background plus sombre qui apparait au survol des projets */
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -250,7 +251,7 @@ p {
 
 }
 
-
+/* Élément pour fermer la modal */
 .close {
     position: absolute;
     top: 30px;
@@ -261,6 +262,7 @@ p {
     cursor: pointer;
 }
 
+/* Éléments textuels de la modal */
 .modal-titre {
     color: var(--text-color);
     text-align: center;
@@ -335,6 +337,7 @@ p {
     gap: 15px;
 }
 
+/* Grille qui qui place les informations clés sur une même ligne */
 .modal-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -342,11 +345,12 @@ p {
     column-gap: 5rem;
 }
 
-
+/* Taille des images de processus */
 .modal-processus img {
     max-width: 15rem;
 }
 
+/* Style du texte de processus */
 .modal-processus_texte {
     color: var(--text-color);
     text-align: center;
@@ -358,6 +362,7 @@ p {
     font-family: "Alegreya";
 }
 
+/* Style des h3 */
 h3 {
     display: flex;
     justify-content: center;
@@ -365,6 +370,7 @@ h3 {
     font-family: "Alegreya";
 }
 
+/* Placement en grille des applications avec un petit espace entre eux*/
 .apps {
     display: grid;
     justify-content: center;
@@ -372,11 +378,13 @@ h3 {
     column-gap: 5rem;
 }
 
+/* Taille des applications */
 .apps img {
     width: 4rem;
 
 }
 
+/* Effet hover pour valoriser les applications */
 .apps img:hover {
     transform: translateY(-10px) scale(1.2);
     transition: transform 0.2s;
@@ -392,11 +400,13 @@ h3 {
     padding-bottom: 4rem;
 }
 
+
+/* Section Contact */
 #contact {
     color: var(--text-color);
 }
 
-
+/* Footer */
 footer {
     display: flex;
     justify-content: center;
@@ -414,6 +424,7 @@ footer {
         display: none;
     }
 
+    /* Navbar movile */
     .Mobilenav {
         display: flex;
         justify-content: space-between;
@@ -425,6 +436,7 @@ footer {
 
     }
 
+    /* Logo mobile */
     .logo {
         font-size: 2rem;
         text-decoration: none;
@@ -432,7 +444,7 @@ footer {
     }
 
 
-    /* Menu hamburger */
+    /* Hamburger */
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -445,7 +457,7 @@ footer {
         margin: 20px;
     }
 
-
+    /* Style d'apparence du bouton hamburger */
     .hamburger span {
         display: block;
         height: 4px;
@@ -454,6 +466,7 @@ footer {
         transition: 0.3s;
     }
 
+    /* Bouton clair/sombre */
     .toggle_menu {
         width: 50px;
         height: 50px;
@@ -462,6 +475,7 @@ footer {
         margin-top: 20px;
     }
 
+    /* menu hamburger */
     .menu {
         display: none;
         background: var(--bg-color);
@@ -469,12 +483,14 @@ footer {
         box-shadow: 0 0 20px var(--text-color);
     }
 
+    /* Liste d'éléments du menu */
     .menu ul {
         list-style: none;
         padding: 0;
 
     }
 
+    /* éléments du menu */
     .menu li {
         margin: 10px 0;
         font-size: 1.5rem;
@@ -511,14 +527,14 @@ footer {
         margin-top: 4rem;
     }
 
+    /* Photo du profil */
     .photo_profil {
         width: 24rem;
         border-radius: 20px;
 
     }
 
-  
-
+    /* Style du titre h2 */
     h2 {
         display: flex;
         justify-content: center;
@@ -536,6 +552,8 @@ footer {
         text-underline-offset: 15px;
     }
 
+
+    /* Style des h3 */
     h3 {
         display: flex;
         justify-content: center;
@@ -567,6 +585,7 @@ footer {
         row-gap: 4em;
     }
 
+    /* Taille de images */
     .image {
         width: 400px;
         position: relative;
@@ -630,6 +649,8 @@ footer {
         height: auto;
 
     }
+
+    /* Éléments textuels de la modal */
 
     .modal-titre {
         color: var(--text-color);
@@ -723,7 +744,7 @@ footer {
         margin-left: 1.5rem;
         font-family: "Alegreya";
     }
-
+     /* Effet grid sur les images dans la modal */
     .modal-grid {
         display: grid;
         grid-template-columns: auto;
@@ -731,7 +752,7 @@ footer {
         column-gap: 1rem;
     }
 
-
+    /* Effet grid sur les applications */
     .apps {
         display: grid;
         justify-content: center;
@@ -740,10 +761,12 @@ footer {
         row-gap: 5rem;
     }
 
+    /* Taille des images des applications */
     .apps img {
         width: 5rem;
     }
 
+    /* Effet hover sur les applications */
     .apps img:hover {
         transform: translateY(-10px) scale(1.2);
         transition: transform 0.2s;
@@ -751,7 +774,7 @@ footer {
     }
 
 
-
+    /* Style du linkedin */
     .linkedin {
         display: flex;
         justify-content: center;

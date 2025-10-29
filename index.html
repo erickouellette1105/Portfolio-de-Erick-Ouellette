@@ -11,12 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
     <div id="app">
-
         <!-- Navbar du portfolio -->
         <nav>
             <ul class="nav-list">
@@ -40,14 +38,12 @@
                     <button @click="toggleTheme" class="toggle"></button>
                 </li>
             </ul>
-
-
         </nav>
-
 
         <!-- Nav mobile -->
         <div class="Mobilenav">
             <a href="index.html" class="logo">ÉO</a>
+            <!-- Icône Menu hamburger-->
             <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -55,8 +51,8 @@
             </button>
         </div>
 
+        <!--Menu hamburger-->
         <nav class="menu" id="menu">
-
             <ul>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projets">Projets</a></li>
@@ -66,7 +62,6 @@
                 <li><button @click="toggleTheme" class="toggle_menu"></button></li>
             </ul>
         </nav>
-
 
         <main>
             <!-- Titre du portfolio -->
@@ -92,7 +87,9 @@
                 <h2>Projets</h2>
                 <!-- Cartes -->
                 <div class="wrapper">
-                    <div class="image" v-for="project in projects" :key="project.id"
+                    <div class="image" 
+                        v-for="project in projects" 
+                        :key="project.id"
                         @click="openModal('modal' + project.id)">
                         <img :src="project['image-modal']" class="wrapper_img" alt="">
                         <div class="content">
@@ -102,15 +99,13 @@
                     <div class="modal" v-for="project in projects" :id="'modal' + project.id"
                         :key="'modal' + project.id">
                         <span class="close" @click="closeModal('modal' + project.id)"></span>
-                        <!--Lien vers document/vidéo/site -->
-                        <!-- Target blank permet d'ouvrir le lien vers une autre fenêtre-->
                         <h1 class="modal-titre">{{project.title}}</h1>
+                        <!--Lien vers document/vidéo/site --><!-- Target blank permet d'ouvrir le lien vers une autre fenêtre-->
                         <a v-if="project.link" :href="project.link" target="_blank">
                             <img class="modal-content" :src="project['image-modal']">
                         </a>
                         <!--Éléments textuels de description du projet-->
-
-                        <div class="modal-grid">
+                        <div class="modal-grid"> <!-- Grid pour cette partie des informations-->
                             <div class="modal-cours">{{project.category}}</div>
                             <div class="modal-nombre">{{project.nombre}}</div>
                             <div class="modal-role">{{project.role}}</div>
@@ -120,37 +115,37 @@
                         <div class="modal-intro">{{project.intro}}</div>
                         <div class="modal-description">{{project.description}}</div>
                         <!-- Ceci fait en sorte d'afficher les images d'un seul projet -->
-                        <div class="modal-processus" v-if="project.images && project.images.length > 0">
+                        <div class="modal-processus" v-if="project.images?.length">
                             <img v-for="(img, i) in project.images" :src="img" :key="i" alt="">
                         </div>
                         <div class="modal-processus_texte">{{project.texte}}</div>
                     </div>
-
-
-
                 </div>
             </section>
 
+            <!--Section compétences-->
             <section id="compétences" class="Compétences">
                 <h2>Compétences</h2>
                 <div class="apps">
+                    <!--Lien sur les images qui mènent au sites web-->
                     <a href="https://www.figma.com/"><img src="img/figma.png" alt=""></a>
                     <a href="https://code.visualstudio.com/"><img src="img/visual-studio.png" alt=""></a>
-                    <a href="https://www.blackmagicdesign.com/ca/products/davinciresolve"><img src="img/davinci.png" alt=""></a>
+                    <a href="https://www.blackmagicdesign.com/ca/products/davinciresolve"><img src="img/davinci.png"
+                            alt=""></a>
                     <a href="https://github.com/"><img src="img/github.png" alt=""></a>
                     <a href="https://www.adobe.com/ca/products/photoshop.html"><img src="img/photoshop.png" alt=""></a>
                     <a href="https://www.reaper.fm/"><img src="img/reaper.png" alt=""></a>
                     <a href="https://www.blender.org/"><img src="img/blender.png" alt=""></a>
                     <a href="https://www.autodesk.com/ca-en/products/maya/overview"><img src="img/maya.png" alt=""></a>
                 </div>
-
-
             </section>
 
+            <!--Section Contact-->
             <section id="contact">
                 <h2>Me contacter</h2>
                 <h3>erickouellette1105@gmail.com</h3>
-                <a href="https://www.linkedin.com/in/%C3%A9rick-ouellette-aa4573293/"><img src="img/linkedin.png" class="linkedin"></a>
+                <a href="https://www.linkedin.com/in/%C3%A9rick-ouellette-aa4573293/"><img src="img/linkedin.png"
+                        class="linkedin"></a>
             </section>
 
             <footer>
