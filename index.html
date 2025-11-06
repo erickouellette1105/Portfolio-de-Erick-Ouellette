@@ -98,7 +98,7 @@
                     </div><!--Modal (pop-up)-->
                     <div class="modal" v-for="project in projects" :id="'modal' + project.id"
                         :key="'modal' + project.id">
-                        <span class="close" @click="closeModal('modal' + project.id)"></span>
+                        <button class="close" @click="closeModal('modal' + project.id)">X</button>
                         <h1 class="modal-titre">{{project.title}}</h1>
                         <!--Lien vers document/vidéo/site --><!-- Target blank permet d'ouvrir le lien vers une autre fenêtre-->
                         <a v-if="project.link" :href="project.link" target="_blank">
@@ -113,12 +113,12 @@
                         </div>
                         <div class="modal-team">{{project.team}}</div>
                         <div class="modal-intro">{{project.intro}}</div>
-                        <div class="modal-description">{{project.description}}</div>
+                        <div class="modal-description">{{project.description}}</div> <div class="modal-processus_texte">{{project.texte}}</div>
                         <!-- Ceci fait en sorte d'afficher les images d'un seul projet -->
                         <div class="modal-processus" v-if="project.images?.length">
                             <img v-for="(img, i) in project.images" :src="img" :key="i" alt="">
                         </div>
-                        <div class="modal-processus_texte">{{project.texte}}</div>
+                       
                     </div>
                 </div>
             </section>

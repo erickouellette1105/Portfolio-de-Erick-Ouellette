@@ -254,12 +254,15 @@ p {
 /* Élément pour fermer la modal */
 .close {
     position: absolute;
-    top: 30px;
+    top: 50px;
     right: 50px;
-    color: #fff;
+    color: black;
     font-size: 40px;
     font-weight: bold;
-    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: none;
 }
 
 /* Éléments textuels de la modal */
@@ -357,6 +360,14 @@ p {
     margin-bottom: 20px;
     font-family: "Alegreya";
 }
+.modal-description,
+.modal-processus_texte {
+    max-width: 60%; /* Adjust width as needed */
+    margin: 20px auto; /* Centers the elements */
+    text-align: center;
+    display: block; /* Ensures proper centering */
+}
+
 
 /* Style des h3 */
 h3 {
@@ -413,7 +424,7 @@ footer {
 
 /* Section Mobile */
 
-@media (max-width: 480px) {
+@media screen and (max-width: 800px) {
 
     /* Navbar */
     .nav-list {
@@ -705,30 +716,32 @@ footer {
         font-family: "Alegreya";
     }
 
-    .modal-description {
-        color: var(--text-color);
-        text-align: center;
-        font-size: 1.2rem;
-        width: 20rem;
-        margin-left: 3rem;
-        margin-top: 40px;
-        font-family: "Alegreya";
-    }
+ /* --- VERSION MOBILE MODAL FIX --- */
+.modal-description,
+.modal-processus_texte {
+    max-width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Alegreya";
+    display: block;
+}
 
-    .modal-processus {
-        color: var(--text-color);
-        font-size: 1rem;
-        margin-top: 20px;
-        font-family: "Alegreya";
-        display: grid;
-        justify-content: center;
-        grid-template-columns: auto;
-        gap: 15px;
-    }
+/* Grille Mobile */
+.modal-processus {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
 
-    .modal-processus img {
-        width: 20rem;
-    }
+/* Images plein écran max */
+.modal-processus img {
+    width: 100%;
+    max-width: 22rem; /* taille max propre */
+    margin: auto;
+    border-radius: 5px;
+}
 
     .modal-processus_texte {
         color: var(--text-color);
