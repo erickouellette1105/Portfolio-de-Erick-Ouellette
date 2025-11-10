@@ -163,7 +163,7 @@ p {
 .wrapper {
     display: grid;
     justify-content: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     column-gap: 4em;
     row-gap: 4em;
 }
@@ -249,6 +249,15 @@ p {
     width: 40vw;
     border: 0.1px solid var(--text-color);
     height: auto;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    image-rendering: auto;
+    border-radius: 5px;
 }
 
 /* Élément pour fermer la modal */

@@ -4,8 +4,9 @@
     "title": "Abri de survie",
     "link": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e1d0a125-8168-4991-934e-fa75664159b1?viewer%21megaVerb=group-discover",
     "category": "Projet 3d",
+    "grid-image": "./img/abri_survie.png",
     "image-modal": [
-      "./img/abri_survie.png"
+      "./img/abri-hd.png"
     ],
     "nombre": "Équipe",
     "team": "Justin Guay, Érick Ouellette, Maika Désy, Quoc Huy Do",
@@ -27,8 +28,9 @@
     "title": "Kigo",
     "link": "https://tim-montmorency.com/2024/projets/Kigo/docs/web/index.html",
     "category": "Projet 3d",
+    "grid-image": "./img/Kigo.png",
     "image-modal": [
-      "img/Kigo.png"
+      "img/kigo-hd.png"
     ],
     "nombre": "Équipe",
     "team": "William Rathier Mailly, Érick Ouellette, Gabriel Clerval, Nicolas St-Martin, Antoine Dion",
@@ -42,8 +44,9 @@
     "title": "Étang de poissons",
     "link": "https://youtu.be/6905QmNpdVw",
     "category": "Projet 3d",
+    "grid-image": "./img/koi_pond.png",
     "image-modal": [
-      "img/koi_pond.png"
+      "img/koi_pond-hd.png"
     ],
     "nombre": "Équipe",
     "team": "Justin Guay, Érick Ouellette",
@@ -57,8 +60,9 @@
     "link": "https://youtu.be/vVpJtjzArY0",
     "title": "Fusion",
     "category": "3d",
+    "grid-image": "./img/fusion.png",
     "image-modal": [
-      "./img/fusion.png"
+      "./img/fusion-hd.png"
     ],
     "nombre": "Équipe",
     "team": "Justin Guay, Érick Ouellette, Jacob Alarie-Brousseau",
@@ -66,5 +70,37 @@
     "logiciels": "Illustrator, After Effects, DaVinci Resolve",
     "intro": "Fusion est un projet de montage sonore inspiré d'un poème écrit par des élèves d'une autre technique au cégep montmorency.",
     "description": "Ce court métrage qui doit son nom au poème Fusion avait l'objectif de démontrer le message de fusion. Nous avons créer un court métrage oû le personnage principal essaie de régler un problème nucléaire à la centrale mais ne peux pas le stopper ce qui l'amène au désespoir. Mon rôle était de jouer le personnage, de faire le montage vidéo, de créer des illustrations et de les animer."
+  },
+   {
+    "id": 5,
+    "title": "Katana",
+    "link": "./img/katana-hd.png",
+    "category": "3d",
+    "grid-image": "./img/katana.png",
+    "image-modal": [
+      "./img/katana-hd.png"
+    ],
+    "nombre": "Érick Ouellette",
+   
+    "role": "Modélisation 3d",
+    "logiciels": "Blender",
+    "intro": "Pour ce projet personnel, j'ai modélisé un katana",
+    "description": "J'ai voulu apprendre à maîtriser Blender puisque le logiciel Maya que j'utilisait est moins accessible. Mon but était de me rendre familier avec Blender."
+  },
+  {
+    "id": 6,
+    "title": "Autoportrait",
+    "link": "./img/autoportrait-hd.png",
+    "category": "Photoshop",
+    "grid-image": "./img/autoportrait.png",
+    "image-modal": [
+      "./img/autoportrait-hd.png"
+    ],
+    "nombre": "Érick Ouellette",
+   
+    "role": "Montage photoshop",
+    "logiciels": "Adobe Photoshop",
+    "intro": "Autoportrait est un projet de montage photoshop où je devait créer des autoportraits de moi-même.",
+    "description": "Puisque je n'avais pas de bonnes photos de moi, j'ai chercher des des photos libres de droits sur Unsplash et des fonds d'écrans surréalistes. Ensuite j'ai fait un montage pour associer les couleurs des fonds sur les personnes."
   }
 ]
